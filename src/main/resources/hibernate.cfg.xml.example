@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database Connection Settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_db</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">your_password</property>
+
+        <!-- Hibernate Dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="org.example.entity.Student"/>
+        <mapping class="org.example.entity.Students"/>
+        <mapping class="org.example.entity.Employee"/>
+        <mapping class="org.example.entity.Person"/>
+        <mapping class="org.example.entity.Laptop"/>
+        <mapping class="org.example.entity.Candidate"/>
+        <mapping class="org.example.entity.Department"/>
+        <mapping class="org.example.entity.CollegeStudent"/>
+        <mapping class="org.example.entity.Author"/>
+        <mapping class="org.example.entity.Book"/>
+    </session-factory>
+</hibernate-configuration>

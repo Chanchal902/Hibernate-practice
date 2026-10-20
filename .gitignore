@@ -41,3 +41,4 @@ build/
 
 ### Hibernate / Database Config ###
 hibernate.cfg.xml
+src/main/resources/hibernate.cfg.xml
